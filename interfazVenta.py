@@ -32,8 +32,26 @@ class InterfazVenta():
                 self.agregarVenta()
             elif menu == 2:
                 self.mostrarVentas()
+            elif menu == 3:
+                self.eliminarVenta()
+            elif menu == 4:
+                self.modificarVenta()
             elif menu == 5:
                 self.crearJsonVentas()
+                
+    def modificarVenta(self):
+        self.eliminarVenta()
+        self.agregarVenta()
+                
+    def eliminarVenta(self):
+        os.system("cls")
+        print("Eliminar Venta")
+        elemento = int(input("Ingrese el espacio de la lista que desea eliminar: "))
+        if self.llamarMetodo.eliminarDeLista(elemento) == False:
+            os.system("cls")
+            self.eliminarVenta()
+            print("Elemento eliminado")
+        
     def mostrarVentas(self):
         os.system("cls")
         print("Mostrar ventas")
@@ -49,7 +67,6 @@ class InterfazVenta():
         fecha = now.strftime("%d/%m/%Y")
         total = self.sumarTotal(detalle_venta)
         nuevaVenta = Venta(cliente, detalle_venta, fecha, total)
-        print(nuevaVenta)
         self.llamarMetodo.agregarEnLista(nuevaVenta)
         enter = input("Presione una tecla para continuar...")
         

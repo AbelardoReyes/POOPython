@@ -1,9 +1,9 @@
 [
     {
         "cliente": {
-            "rfc": "GARA031028",
-            "nombre": "Abelardo",
-            "telefono": "8714733996",
+            "rfc": "VAAL051702",
+            "nombre": "Lili",
+            "telefono": "7865768654",
             "lista": []
         },
         "detalle_venta": [
@@ -20,7 +20,20 @@
                 "descripcion": null,
                 "precio": 15000.0,
                 "lista": []
-            },
+            }
+        ],
+        "fecha": "27/01/2023",
+        "total": 30000.0,
+        "lista": []
+    },
+    {
+        "cliente": {
+            "rfc": "GARA031028",
+            "nombre": "Abelardo",
+            "telefono": "8714733996",
+            "lista": []
+        },
+        "detalle_venta": [
             {
                 "codigo": 2,
                 "nombre": "mouse",
@@ -29,22 +42,15 @@
                 "lista": []
             },
             {
-                "codigo": 2,
-                "nombre": "mouse",
+                "codigo": 1,
+                "nombre": "laptop",
                 "descripcion": null,
-                "precio": 120.0,
-                "lista": []
-            },
-            {
-                "codigo": 2,
-                "nombre": "mouse",
-                "descripcion": null,
-                "precio": 120.0,
+                "precio": 15000.0,
                 "lista": []
             }
         ],
         "fecha": "27/01/2023",
-        "total": 30360.0,
+        "total": 15120.0,
         "lista": []
     }
 ]
