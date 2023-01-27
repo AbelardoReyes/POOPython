@@ -15,3 +15,9 @@ class Producto(Lista):
 
     def __repr__(self):
         return f"Codigo: {self.codigo} Nombre: {self.nombre} Descripcion: {self.descripcion} Precio: {self.precio}"
+    
+    def cargarDiccionarioALista(self, diccionario):
+        for lista in diccionario:
+            producto = Producto(
+                lista["codigo"], lista["nombre"], lista["descripcion"], lista["precio"])
+            self.agregarEnLista(producto)

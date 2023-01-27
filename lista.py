@@ -6,9 +6,6 @@ class Lista(MyJson):
     def __init__(self):
         self.lista = []
 
-    def __repr__(self):
-        return {self.lista}
-
     def __str__(self):
         return {self.lista}
 
@@ -20,11 +17,9 @@ class Lista(MyJson):
             print(elemento)
             
     def eliminarDeLista(self, elemento):
-        if len(self.lista) == 0:
-            print("Lista vacia")
-            return True
         try:
             self.lista.pop(elemento)
+            return True
         except:
             print("Accion fallida, no se encontro el elemento")
             enter = input("Presione una tecla para continuar...")
@@ -32,6 +27,9 @@ class Lista(MyJson):
         enter = input("Presione una tecla para continuar...")
     
     def obtenerLista(self):
-        return self.lista
+        li=[]
+        for elemento in self.lista:
+            li.append(elemento.__dict__)
+        return li
         
             

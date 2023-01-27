@@ -1,0 +1,50 @@
+[
+    {
+        "cliente": {
+            "rfc": "GARA031028",
+            "nombre": "Abelardo",
+            "telefono": "8714733996",
+            "lista": []
+        },
+        "detalle_venta": [
+            {
+                "codigo": 1,
+                "nombre": "laptop",
+                "descripcion": null,
+                "precio": 15000.0,
+                "lista": []
+            },
+            {
+                "codigo": 1,
+                "nombre": "laptop",
+                "descripcion": null,
+                "precio": 15000.0,
+                "lista": []
+            },
+            {
+                "codigo": 2,
+                "nombre": "mouse",
+                "descripcion": null,
+                "precio": 120.0,
+                "lista": []
+            },
+            {
+                "codigo": 2,
+                "nombre": "mouse",
+                "descripcion": null,
+                "precio": 120.0,
+                "lista": []
+            },
+            {
+                "codigo": 2,
+                "nombre": "mouse",
+                "descripcion": null,
+                "precio": 120.0,
+                "lista": []
+            }
+        ],
+        "fecha": "27/01/2023",
+        "total": 30360.0,
+        "lista": []
+    }
+]

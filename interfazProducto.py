@@ -2,16 +2,16 @@ import os
 from producto import Producto
 
 
-class InterfazProductos(Producto):
+class InterfazProductos:
     def __init__(self):
-        self.llamarMetodo = None
+        self.llamarMetodo = Producto()
         super().__init__()
 
     def __str__(self) -> str:
         pass
 
     def menuProductos(self):
-        self.llamarMetodo = InterfazProductos()
+        self.cargarJson()
         menu = 10
         while menu != 0:
             os.system("cls")
@@ -34,7 +34,7 @@ class InterfazProductos(Producto):
             elif menu == 5:
                 self.crearJson()
 
-    def agregarProducto(self, id=0):
+    def agregarProducto(self):
         os.system("cls")
         codigo = int(input("Ingrese el codigo del producto: "))
         nombre = input("Ingrese el nombre del producto: ")
@@ -56,6 +56,7 @@ class InterfazProductos(Producto):
 
     def eliminarProducto(self):
         os.system("cls")
+        print("Eliminar Producto")
         elemento = int(
             input("Ingrese el espacio de la lista que desea eliminar:"))
         if self.llamarMetodo.eliminarDeLista(elemento) == False:
@@ -72,3 +73,8 @@ class InterfazProductos(Producto):
         lista = self.llamarMetodo.obtenerLista()
         nombreArchivo = "productos.json"    
         self.llamarMetodo.guardarArchivo(nombreArchivo, lista)
+        
+    def cargarJson(self):
+        nombreArchivo = "productos.json"
+        diccionario = self.llamarMetodo.cargarArchivo(nombreArchivo)
+        self.llamarMetodo.cargarDiccionarioALista(diccionario)   
