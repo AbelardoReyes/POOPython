@@ -1,0 +1,9 @@
+[
+    {
+        "codigo": 1,
+        "nombre": "laptop",
+        "descripcion": "laptop Dell",
+        "precio": 15000.0,
+        "lista": []
+    }
+]
