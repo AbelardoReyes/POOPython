@@ -48,9 +48,10 @@ class InterfazProductos:
 
     def mostrarProductos(self):
         os.system("cls")
+        id = 1
         print("Lista de productos")
         # indices = ["Codigo\tNombre\tDescripcion\tPrecio"]
-        self.llamarMetodo.mostrarLista()
+        self.llamarMetodo.mostrarLista(id)
         enter = input("Presione una tecla para continuar...")
         os.system("cls")
 

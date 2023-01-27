@@ -44,8 +44,9 @@ class IntefazCliente:
     
     def mostarClientes(self):
         os.system("cls")
+        id = 2
         print("Mostrar clientes")
-        self.llamarMetodo.mostrarLista()
+        self.llamarMetodo.mostrarLista(id)
         enter = input("Presione enter para continuar")
         os.system("cls")
     

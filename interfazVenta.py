@@ -54,8 +54,9 @@ class InterfazVenta():
         
     def mostrarVentas(self):
         os.system("cls")
+        id = 3
         print("Mostrar ventas")
-        self.llamarMetodo.mostrarLista()
+        self.llamarMetodo.mostrarLista(id)
         enter = input("Presione una tecla para continuar...")
 
     def agregarVenta(self):
