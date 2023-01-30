@@ -57,9 +57,8 @@ class InterfazProductos:
 
     def eliminarProducto(self):
         os.system("cls")
-        print("Eliminar Producto")
         elemento = int(
-            input("Ingrese el espacio de la lista que desea eliminar:"))
+            input("Ingrese el espacio de la lista: "))
         if self.llamarMetodo.eliminarDeLista(elemento) == False:
             os.system("cls")
             self.eliminarProducto()
@@ -67,8 +66,8 @@ class InterfazProductos:
         os.system("cls")
 
     def modificarProducto(self):
-        self.llamarMetodo.eliminarProducto()
-        self.llamarMetodo.agregarProducto(id)
+        self.eliminarProducto()
+        self.agregarProducto()
         
     def crearJson(self):
         lista = self.llamarMetodo.obtenerLista()

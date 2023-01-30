@@ -7,17 +7,17 @@
         "lista": []
     },
     {
-        "codigo": 2,
-        "nombre": "mouse",
-        "descripcion": "dasde",
-        "precio": 120.0,
-        "lista": []
-    },
-    {
         "codigo": 3,
         "nombre": "smartTV",
         "descripcion": "Samsung",
         "precio": 10000.0,
+        "lista": []
+    },
+    {
+        "codigo": 2,
+        "nombre": "Mouse",
+        "descripcion": "hp",
+        "precio": 200.0,
         "lista": []
     }
 ]

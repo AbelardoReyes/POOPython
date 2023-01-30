@@ -28,6 +28,8 @@ class IntefazCliente:
                 self.mostarClientes()
             elif menu == 3:
                 self.eliminarCliente()
+            elif menu == 4:
+                self.modificarCliente()
             elif menu == 5:
                 self.crearJson()
                 
@@ -52,13 +54,16 @@ class IntefazCliente:
     
     def eliminarCliente(self):
         os.system("cls")
-        print("Eliminar cliente")
-        elemento = int(input("Ingrese el espacio de la lista que desea eliminar: "))
+        elemento = int(input("Ingrese el espacio de la listar: "))
         if self.llamarMetodo.eliminarDeLista(elemento) == False:
             os.system("cls")
             self.eliminarCliente()
         enter = input("Presione enter para continuar")
         os.system("cls")
+    def modificarCliente(self):
+        os.system("cls")
+        self.eliminarCliente()
+        self.agregarCliente()
         
     def crearJson(self):
         lista = self.llamarMetodo.obtenerLista()
