@@ -1,7 +1,6 @@
 import os
 from lista import Lista
 
-
 class Producto(Lista):
     def __init__(self, codigo=None, nombre=None, descripcion=None, precio=None):
         self.codigo = codigo

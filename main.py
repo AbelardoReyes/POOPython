@@ -28,3 +28,4 @@ class Main:
 if __name__ == "__main__":
     main = Main()
     main.menu()
+    print("Fin del programa")
