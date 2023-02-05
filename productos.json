@@ -1,22 +1,50 @@
 [
     {
         "codigo": 1,
-        "nombre": "laptop",
-        "descripcion": "laptop Dell",
-        "precio": 15000.0,
-        "lista": []
-    },
-    {
-        "codigo": 3,
-        "nombre": "smartTV",
-        "descripcion": "Samsung",
-        "precio": 10000.0,
+        "nombre": "Mouse",
+        "descripcion": "sadsa",
+        "precio": 80.0,
         "lista": []
     },
     {
         "codigo": 2,
-        "nombre": "Mouse",
-        "descripcion": "hp",
+        "nombre": "Laptop",
+        "descripcion": "asdsad",
+        "precio": 12000.0,
+        "lista": []
+    },
+    {
+        "codigo": 3,
+        "nombre": "SmartTV",
+        "descripcion": "asdasd",
+        "precio": 10000.0,
+        "lista": []
+    },
+    {
+        "codigo": 4,
+        "nombre": "Lampara",
+        "descripcion": "adsasd",
+        "precio": 123.0,
+        "lista": []
+    },
+    {
+        "codigo": 5,
+        "nombre": "Bocina",
+        "descripcion": "asdsa",
+        "precio": 12.0,
+        "lista": []
+    },
+    {
+        "codigo": 6,
+        "nombre": "Reloj",
+        "descripcion": "asdsad",
+        "precio": 70.0,
+        "lista": []
+    },
+    {
+        "codigo": 7,
+        "nombre": "Pintura",
+        "descripcion": "jfsajdsad",
         "precio": 200.0,
         "lista": []
     }

@@ -17,9 +17,11 @@ class MyJson:
             json.dump(listaProductos, file, indent=4)
 
     def cargarArchivo(self, nombreArchivo):
-        with open(nombreArchivo, "r") as file:
-            data = json.load(file)
-
-        return data
+        try:
+            with open(nombreArchivo, "r") as file:
+                data = json.load(file)
+            return data
+        except:
+            return False
     
 

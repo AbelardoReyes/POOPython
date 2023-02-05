@@ -6,12 +6,21 @@ from conexion import Conexion
 class InterfazProductos:
     def __init__(self):
         self.llamarMetodo = Producto()
+        self.listaAlterna = Producto()
         super().__init__()
 
     def __str__(self) -> str:
         pass
 
     def menuProductos(self):
+        conexion = Conexion()
+        client =  conexion.iniciarConexion()
+        if client != False:
+            apuntador = "productos"
+            database = "tienda"
+            self.cargarJsonAlterno()
+            diccionario = self.listaAlterna.obtenerLista()
+            conexion.insertarMuchosMongo(diccionario,client,database,apuntador)
         data = self.cargarJson()
         menu = 10
         while menu != 0:
@@ -54,8 +63,16 @@ class InterfazProductos:
         conexion = Conexion()
         database = "tienda"
         client = conexion.iniciarConexion()
-        conexion.insertarUnoMongo(diccionario,client,database,apuntador)
-        enter = input("Conexion exitosa")
+        if client == False:
+            self.listaAlterna.agregarEnLista(producto)
+            self.crearJson()
+            self.crearJsonAlterno()
+            print("Error al conectar con la base de datos")
+            enter = input("Presione una tecla para continuar...")
+        else:
+            self.crearJson()
+            conexion.insertarUnoMongo(diccionario,client,database,apuntador)
+            enter = input("Conexion exitosa")
         os.system("cls")
 
     def mostrarProductos(self):
@@ -85,11 +102,30 @@ class InterfazProductos:
         lista = self.llamarMetodo.obtenerLista()
         nombreArchivo = "productos.json"
         self.llamarMetodo.guardarArchivo(nombreArchivo, lista)
+            
+    def crearJsonAlterno(self):
+        lista = self.listaAlterna.obtenerLista()
+        nombreArchivo = "productos2.json"
+        self.listaAlterna.guardarArchivo(nombreArchivo, lista)
 
     def cargarJson(self):
-        nombreArchivo = "productos.json"
-        diccionario = self.llamarMetodo.cargarArchivo(nombreArchivo)
-        self.llamarMetodo.cargarDiccionarioALista(diccionario)
+        try:
+            nombreArchivo = "productos.json"
+            diccionario = self.llamarMetodo.cargarArchivo(nombreArchivo)
+            if diccionario == False:
+                self.crearJson()
+            else:
+                self.llamarMetodo.cargarDiccionarioALista(diccionario)
+        except:
+            input("No se encontro el archivo")
+    
+    def cargarJsonAlterno(self):
+        try:
+            nombreArchivo = "productos2.json"
+            diccionario = self.listaAlterna.cargarArchivo(nombreArchivo)
+            self.listaAlterna.cargarDiccionarioALista(diccionario)
+        except:
+            input("No se encontro el archivo")
         
     def mondongo(self):
         apuntador = "productos"
